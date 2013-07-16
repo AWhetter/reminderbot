@@ -54,7 +54,11 @@ and seconds.
 TODO
 -----
 Tests!
+
 Add support for saving reminders, and reloading them on startup if the bot dies
+
 Add support for repeating reminders (with a configurable minimum interval)
+
 Turn into a gem?
-remind me again in <time>
+
+remind me again in \<time\>
