@@ -33,7 +33,7 @@ If you don't already have a bot set up then an example one is provided in
 reminderbot.rb. Just change the configuration to the settings you want, and then
 run with `ruby reminderbot.rb`.
 For more information on configuring a chinch bot, take a look at the cinch
-documentation (https://github.com/achiu/cinch-github).
+documentation (https://github.com/cinchrb/cinch).
 
 Usage
 -----
@@ -57,3 +57,4 @@ Tests!
 Add support for saving reminders, and reloading them on startup if the bot dies
 Add support for repeating reminders (with a configurable minimum interval)
 Turn into a gem?
+remind me again in <time>
