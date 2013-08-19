@@ -53,9 +53,7 @@ and seconds.
 
 TODO
 -----
-Tests!
-
-Add support for saving reminders, and reloading them on startup if the bot dies
+Tests! (Including if we can set 2 reminders at once).
 
 Add support for repeating reminders (with a configurable minimum interval)
 
