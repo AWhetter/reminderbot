@@ -43,7 +43,7 @@ Example:
 
 You can also use multiple units of time in one reminder. eg:
 
-    remind me in 1 hour and 30 minutes to go to stop coding and go to bed!
+    remind me in 1 hour and 30 minutes to stop coding and go to bed!
 
 The currently supported units of time are years, weeks, days, hours, minutes,
 and seconds.
