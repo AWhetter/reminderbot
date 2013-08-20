@@ -58,6 +58,7 @@ class Reminder
         reminder = AReminder.new(channel, sender, created_at, remind_at, text)
         @reminders << reminder
         @scheduler.in "#{time_to_add}s" do
+            @reminders.delete_if { |reminder| reminder.remind_at <= Time.now }
             reminder.send(@bot)
         end
 
