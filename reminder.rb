@@ -30,9 +30,7 @@ class Reminder
     end
 
     def execute(m, times, text)
-        debug times
         time_list = parse_time_list(times)
-        debug time_list
 
         time_to_add = 0
         time_list.each_slice(2) do |time|
