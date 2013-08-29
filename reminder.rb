@@ -30,8 +30,9 @@ class Reminder
     end
 
     def execute(m, times, text)
-        time_list = times.split ' '
-        time_list.delete "and"
+        debug times
+        time_list = parse_time_list(times)
+        debug time_list
 
         time_to_add = 0
         time_list.each_slice(2) do |time|
@@ -71,6 +72,37 @@ class Reminder
         rescue
             return nil
         end
+    end
+
+    def parse_time_list(times)
+        to_return = []
+        current_item = ''
+        last_type = :whitespace
+        times.each_char do |char|
+            if char == ' '
+                last_type = :whitespace
+                unless current_item == '' || current_item == 'and'
+                    to_return << current_item
+                    current_item = ''
+                end
+            elsif char =~ /[[:alpha:]]/
+                if last_type == :digit
+                    to_return << current_item
+                    current_item = ''
+                end
+                current_item += char
+                last_type = :alpha
+            else
+                current_item += char
+                last_type =:digit
+            end
+        end
+
+        unless current_item == '' || current_item == 'and'
+            to_return << current_item
+        end
+
+        return to_return
     end
 
     def parse_time_unit(str_unit)
