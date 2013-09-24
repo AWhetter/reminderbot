@@ -81,8 +81,8 @@ class Reminder
                 last_type = :whitespace
                 unless current_item == '' || current_item == 'and'
                     to_return << current_item
-                    current_item = ''
                 end
+                current_item = ''
             elsif char =~ /[[:alpha:]]/
                 if last_type == :digit
                     to_return << current_item
