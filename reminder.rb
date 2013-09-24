@@ -9,7 +9,7 @@ class Reminder
     Day_reg = /days?|d/
     Hour_reg = /hours?|hrs?|h/
     Week_reg = /weeks?|wks?|w/
-    Year_reg = /years?|yr|y/
+    Year_reg = /years?|yrs?|y/
     Minute_reg = /minutes?|mins?|m/
     Second_reg = /seconds?|secs?|s/
     Time_unit_reg = Regexp.union(Day_reg, Hour_reg, Week_reg, Year_reg, Minute_reg, Second_reg)
