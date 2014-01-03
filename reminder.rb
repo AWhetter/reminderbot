@@ -18,7 +18,7 @@ class Reminder
 
     def initialize(*args)
         super
-        @scheduler = Rufus::Scheduler.start_new
+        @scheduler = Rufus::Scheduler.new
         @reminders = []
         File.open('reminders.csv', 'r').each do |line|
             # We control the format of the file so we don't need fancy CSV
